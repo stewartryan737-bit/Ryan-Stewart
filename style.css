@@ -31,6 +31,7 @@ section {
 
 .container {
   padding: 50px 0;
+  width: 100%;
 }
 
 .row {
@@ -211,6 +212,7 @@ nav {
 .project__img {
   width: 100%;
   transition: all 600ms ease;
+  height: auto;
 }
 
 .project__wrapper {
@@ -276,4 +278,37 @@ nav {
   margin: 16px 0;
 }
 
+/* 
 
+  FOOTER
+
+*/
+
+footer {
+  background-color: #242424;
+  display: flex;
+  padding: 6% 0;
+}
+
+.footer__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__logo--img {
+  width: 70px;
+}
+
+.footer__social--list {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  margin: 28px 0;
+  justify-content: space-around;
+}
+
+.footer__social--link,
+.footer__copyright {
+  color: white;
+}
