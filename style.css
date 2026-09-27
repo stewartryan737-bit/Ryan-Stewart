@@ -9,6 +9,7 @@
 
 li {
   list-style-type: none;
+  margin-bottom: 120px;
 }
 
 p {
@@ -274,3 +275,5 @@ nav {
 .project__description--para {
   margin: 16px 0;
 }
+
+
