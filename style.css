@@ -281,15 +281,14 @@ nav {
   overflow: hidden;
   display: flex;
   visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 300ms ease, visibility 300ms ease;
+  z-index: -1;
+  transition: visibility 1s, z-index 1s ease, box-shadow 0.5s ease;
 }
 
-.modal--open {
+.modal--open .modal {
+  z-index: 60;
+  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
   visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
 }
 
 .modal__half {
@@ -299,15 +298,23 @@ nav {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  transition: all 300ms ease-in;
+}
+
+.modal--open .modal__about,
+.modal--open .modal__contact {
+  transform: translateX(0%);
 }
 
 .modal__about {
   background-color: rgb(245, 245, 245);
+  transform: translateX(-110%);
 }
 
 .modal__contact {
   background-color: #242424;
   color: white;
+  transform: translateX(110%);
 }
 
 .orange {
@@ -395,7 +402,7 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   z-index: -1;
@@ -416,6 +423,7 @@ nav {
 
 .modal__overlay--visible {
   z-index: 1;
+  display: flex;
 }
 
 .fa-spinner {
